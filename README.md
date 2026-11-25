@@ -6,8 +6,9 @@ Projecto integrador de Engenharia de Software I (ISPTEC, 2026/2027).
 - **Grupo:** G??
 - **Membros:** Dalton da Costa (20231175), Rodolf Gouveia (20210247)
 - **Repositório:** https://github.com/Dalton3C/caderneta-digital-do-coordenador-de-turno.git
-- **Quadro Kanban:** <link, preenches quando o criares>
+- **Quadro Kanban:** https://github.com/users/Dalton3C/projects/1
 - **Aplicação publicada:** (se existir)
+- **Documentos:** [processo.md](processo.md) · [registo de IA](docs/ia.md) · [sprints](sprints/) · [evidencias](docs/evidencias/) 
 
 ## 1. Documentação técnica
 (a preencher)
