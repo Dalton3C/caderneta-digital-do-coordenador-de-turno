@@ -45,7 +45,28 @@ Para gerir o âmbito do projecto (20 dias reais), alguns pedidos do coordenador 
 *   **Simplificados/Rejeitados:** O pedido de "enviar notificações e lembretes" (ex: SMS ou e-mail externo) foi simplificado para **alertas internos no sistema** (dashboard), evitando custos com APIs de terceiros e focando no que é demonstrável localmente.
 
 ## 5. Histórias de Utilizador (Exemplos para o Sprint Backlog)
-*   **US01 (RF04):** Como Coordenador de Turno, quero registar uma ocorrência associando vários alunos, para não ter de duplicar o registo quando há uma discussão em grupo.
-    *   *Critérios de aceitação:* O formulário deve permitir selecionar múltiplos alunos; a ocorrência deve listar todos os alunos associados; o sistema deve guardar a data/hora e o autor.
-*   **US02 (RF06):** Como Coordenador de Turno, quero consultar o histórico de um aluno, para avaliar o seu comportamento ao longo do trimestre.
-    *   *Critérios de aceitação:* A página do aluno deve listar cronologicamente todas as ocorrências e medidas aplicadas.
+
+### US01: Autenticação de Utilizadores (Módulo 1)
+**Como** Coordenador de Turno ou Administrador,
+**quero** fazer login com as minhas credenciais (email e palavra-passe),
+**para** aceder ao sistema de forma segura e ver apenas as funcionalidades do meu perfil.
+
+**Critérios de Aceitação:**
+- [ ] O sistema deve ter uma página de login acessível a utilizadores não autenticados.
+- [ ] O formulário deve ter campos para email e palavra-passe, devidamente etiquetados.
+- [ ] Se as credenciais estiverem erradas, o sistema deve mostrar uma mensagem de erro clara (sem revelar se o email existe ou não, por segurança).
+- [ ] Após o login com sucesso, o utilizador é redirecionado para o dashboard correspondente ao seu perfil.
+- [ ] Se um utilizador tentar aceder a uma página sem estar autenticado, é redirecionado para o login.
+- [ ] O sistema deve permitir fazer logout.
+
+### US02: Gestão de Turmas e Alunos (Módulo 2)
+**Como** Coordenador de Turno,
+**quero** registar e consultar turmas e os seus respetivos alunos,
+**para** organizar a população escolar e preparar o registo de futuras ocorrências.
+
+**Critérios de Aceitação:**
+- [ ] O Coordenador deve poder criar, editar e listar turmas (com nome, ano, turno/curso).
+- [ ] O Coordenador deve poder registar um aluno (nome, número de processo, data de nascimento) e associá-lo a uma turma.
+- [ ] A aplicação deve validar se o número de processo do aluno já existe (não permitir duplicados).
+- [ ] Deve ser possível consultar a lista de todos os alunos de uma determinada turma.
+- [ ] Deve ser possível aceder à página de perfil de um aluno específico.
