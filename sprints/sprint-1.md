@@ -59,8 +59,8 @@ o registo das decisões técnicas, que passam para a Sprint 2.
 - **Dalton:** Fiz — configuração do Git; leituras dos guias. Vou fazer — (o plano dele para o Dia 1). Impedimentos — pouca familiaridade com a protecção da `main`.
 
 ### Dia 2 (25/11)
-- **Rodolf:** Fiz — configuração do quadro: acesso público, convite ao `judsonp` com permissão de escrita, campo de iteração com as 5 sprints, vistas e automações; criação das labels e das 11 issues da Sprint 1 (mais as 3 que passam para a Sprint 2), com responsável e estimativa; planeamento da sprint. Vou fazer — acrescentar o link do quadro ao `README.md`; guardar as capturas de ecrã do quadro em `docs/evidencias/sprint-1/`; escrever a secção «Valores do grupo» no `processo.md` (issue #1). Impedimentos — nenhum de momento.
-- **Dalton:** (as linhas que ele te enviar)
+- **Rodolf:** Fiz — configuração do quadro (acesso público, convite ao `judsonp`, campo de iteração com as 5 sprints, vistas, estados e automações); criação das labels e das 46 issues do Product Backlog (11 da Sprint 1 com critérios de aceitação, responsável e estimativa; as restantes atribuídas às Sprints 2 a 5, por refinar); planeamento da sprint; link do quadro no `README.md` e capturas do quadro em `docs/evidencias/sprint-1/`. Vou fazer — a secção «Valores do grupo» do `processo.md` (#1) e, a seguir, as decisões técnicas (#8). Impedimentos — nenhum de momento.
+- **Dalton:** (por registar)
 
 ### Dia 3 (26/11)
 (a registar no próprio dia)
