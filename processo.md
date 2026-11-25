@@ -27,7 +27,29 @@ Estes são os quatro valores do Manifesto Ágil e o que o nosso grupo decide faz
 
 ## Objectivo do Produto e Definição de Pronto
 
-(Actividade 4 — Sprint 1)
+**Objectivo do Produto (Product Goal):**
+Centralizar a gestão do coordenador de turno numa única aplicação web, eliminando a dispersão por cadernos e folhas de cálculo. A aplicação deve permitir registar ocorrências disciplinares complexas (com múltiplos alunos e testemunhas), acompanhar as medidas aplicadas e consultar o histórico dos alunos de forma rápida, segura e acessível.
+
+**Objectivo da Sprint 1 (Sprint Goal):**
+Estabelecer a fundação do projecto: configurar o repositório, o quadro Kanban e o processo Scrum, tomar as decisões técnicas estruturantes (ADR) e preparar o esqueleto da aplicação, garantindo que a equipa domina o fluxo de trabalho (issues, ramos, PRs e reviews).
+
+**Definição de Pronto (Definition of Done - DoD):**
+Um item do Sprint Backlog só é considerado "Pronto" (e conta como Incremento) quando:
+1. O código está implementado e a aplicação corre localmente sem erros.
+2. Cumpre todos os critérios de aceitação definidos na respectiva Issue.
+3. O código foi revisto e aprovado por pelo menos um colega (Pull Request com merge).
+4. Passa nos testes (quando aplicável) e não quebra funcionalidades anteriores.
+5. Os dados de teste usados são fictícios (em conformidade com a Lei n.º 22/11).
+6. A documentação associada (README, `processo.md` ou ficheiros da sprint) foi actualizada.
+
+**Porque cada artefacto tem um compromisso associado? (Baseado no Scrum Guide 2020)**
+O Scrum Guide estabelece que cada artefacto contém um compromisso que lhe dá foco e valor:
+* O **Product Backlog** compromete-se com o **Product Goal** (a visão de longo prazo), garantindo que a equipa não se perde em tarefas aleatórias.
+* O **Sprint Backlog** compromete-se com o **Sprint Goal** (o objectivo de curto prazo), dando flexibilidade à equipa para ajustar as tarefas diárias desde que o objectivo da sprint seja cumprido.
+* O **Incremento** compromete-se com a **Definição de Pronto (DoD)**, garantindo a qualidade e que o software está realmente utilizável.
+
+**O que acontece se um item não cumprir a DoD no fim da sprint?**
+Se um item não cumprir a DoD, **não é apresentado na Sprint Review** como parte do Incremento. Em vez disso, o item regressa ao **Product Backlog** para ser reavaliado pelo Product Owner e re-priorizado numa sprint futura. O trabalho não é desperdiçado, mas reconhece-se formalmente que a funcionalidade ainda não está concluída.
 
 ## Regras do quadro
 
