@@ -65,6 +65,13 @@ npm run css:build    # compilação final (commit do app.css)
 | `sprints/` | Registo de cada sprint |
 | `processo.md` | Acordo de trabalho da equipa |
 
+### Base de dados
+```bash
+alembic upgrade head        # cria as tabelas
+python -m scripts.seed      # cria 3 utilizadores fictícios (admin, coordenador, professor)
+```
+Palavra-passe de desenvolvimento dos utilizadores fictícios: `Demo#2026`. Não usar em produção.
+
 ## 2. Manual do utilizador
 (a preencher)
 

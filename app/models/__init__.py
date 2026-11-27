@@ -1,0 +1,1 @@
+from app.models.utilizador import Utilizador  # noqa: F401
