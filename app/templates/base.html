@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}">
+</head>
+<body class="bg-white text-slate-900">
+    <a href="#conteudo" class="sr-only focus:not-sr-only">Saltar para o conteúdo</a>
+    <main id="conteudo" class="mx-auto max-w-3xl p-4">
+        <h1 class="text-2xl font-bold">{{ titulo }}</h1>
+    </main>
+</body>
+</html>

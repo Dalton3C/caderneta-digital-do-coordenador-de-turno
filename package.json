@@ -1,0 +1,29 @@
+{
+  "name": "caderneta-digital-do-coordenador-de-turno",
+  "version": "1.0.0",
+  "description": "Projecto integrador de Engenharia de Software I (ISPTEC, 2026/2027).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+    "scripts": {
+    "css:dev": "tailwindcss -i ./app/static/css/input.css -o ./app/static/css/app.css --watch",
+    "css:build": "tailwindcss -i ./app/static/css/input.css -o ./app/static/css/app.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dalton3C/caderneta-digital-do-coordenador-de-turno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dalton3C/caderneta-digital-do-coordenador-de-turno/issues"
+  },
+  "homepage": "https://github.com/Dalton3C/caderneta-digital-do-coordenador-de-turno#readme",
+  "devDependencies": {
+    "tailwindcss": "3.4"
+  }
+}

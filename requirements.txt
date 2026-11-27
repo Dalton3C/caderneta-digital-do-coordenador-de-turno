@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+sqlalchemy
+alembic
+psycopg[binary]
+bcrypt
+itsdangerous
+python-dotenv
+pydantic-settings
