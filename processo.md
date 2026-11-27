@@ -66,7 +66,7 @@ O Scrum Guide estabelece que cada artefacto contém um compromisso que lhe dá f
 * O **Sprint Backlog** compromete-se com o **Sprint Goal** (o objectivo de curto prazo), dando flexibilidade à equipa para ajustar as tarefas diárias desde que o objectivo da sprint seja cumprido.
 * O **Incremento** compromete-se com a **Definição de Pronto (DoD)**, garantindo a qualidade e que o software está realmente utilizável.
 
-**O que acontece se um item não cumprir a DoD no fim da sprint?**
+**O que acontece se um item não cumprir a DoD no fim da sprint?** 
 Se um item não cumprir a DoD, **não é apresentado na Sprint Review** como parte do Incremento. Em vez disso, o item regressa ao **Product Backlog** para ser reavaliado pelo Product Owner e re-priorizado numa sprint futura. O trabalho não é desperdiçado, mas reconhece-se formalmente que a funcionalidade ainda não está concluída.
 
 ## Regras do quadro
