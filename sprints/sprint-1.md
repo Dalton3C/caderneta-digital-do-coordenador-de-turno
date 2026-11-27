@@ -11,6 +11,9 @@
 > por isso a iteração «Sprint 1» aparece no quadro a 25–27 Nov. O calendário do enunciado
 > mantém-se (Sprint 1: 24–27 Nov) e a etiqueta `sprint-1` será criada a 27/11.
 
+> **Nota sobre a entrega do #9.** O esqueleto da aplicação (#9), previsto para 26/11, foi entregue a 27/11
+> por avaria do computador do Dalton. Isso atrasou o #10 e o #11, que dependem dele.
+
 ## Sprint Goal
 
 Ter o repositório, o quadro e o acordo de processo (`processo.md`) operacionais, os requisitos
@@ -63,39 +66,54 @@ o registo das decisões técnicas, que passam para a Sprint 2.
 - **Dalton:** (por registar)
 
 ### Dia 3 (26/11)
-(a registar no próprio dia)
+*(Nota: Registo elaborado a 27/11 devido aos impedimentos)*
+- **Rodolf:** Fiz — o ADR-001 a 003, Objectivo do Produto e DoD, Actores/perfis/RF/RNF. Vou fazer — o #10 assim que o #9 estiver fundido. Impedimentos — o #9 não ficou pronto, por isso o #10 não pôde começar.
+- **Dalton:** Fiz — Tentativa de conclusão do esqueleto FastAPI. Vou fazer — Abrir o PR #57. Impedimentos — Avaria no computador pessoal, impossibilitando o progresso no código.
 
 ### Dia 4 (27/11)
-(a registar no próprio dia)
+- **Rodolf:** Fiz — Corrigi o CI do PR #57 (pythonpath e README apagado), atualizei a documentação técnica do README e iniciei o modelo de BD (#10). Vou fazer — Fechar a documentação técnica e apoiar nas cerimónias de fim de sprint. Impedimentos — O CI estava vermelho e o README foi apagado por engano, mas já resolvido.
+- **Dalton:** Fiz — Recuperei o ambiente de trabalho, abri o PR #57 e fiz a revisão do PR #10 no browser. Vou fazer — Redigir as secções Equipa (#2) e Eventos (#3) no browser e aprovar o PR do CI. Impedimentos — Nenhum (computador recuperado).
+
+## Alterações ao plano durante a sprint (registadas a 27/11)
+
+| Issue | Plano original | O que aconteceu | Motivo |
+|---|---|---|---|
+| #9 | Dalton, 26/11 | Entregue a 27/11 | Avaria do computador do Dalton |
+| #11 | Dalton | Reatribuída a Rodolf | Dependência do #9 e avaria do computador |
+| #2, #3 | Dalton | [Dalton no browser / Rodolf com revisão do Dalton] | [..] |
+| #7 | Dalton | Passa para a Sprint 2 | Sem capacidade |
 
 ## Revisão (27/11)
 
-- **O que foi demonstrado:**
-- **Demonstração enviada ao coordenador de turno (data e canal):**
-- **Retorno recebido:** (se não houver retorno, o Product Owner representa o coordenador de turno e fica escrito aqui)
-- **Itens que não cumpriram a Definição de Pronto (voltam ao Product Backlog):**
+- **O que foi demonstrado:** A aplicação FastAPI a arrancar localmente (rota `/health` a devolver `{"status":"ok"}`), a ligação à base de dados SQLite funcional, o modelo de dados (com a tabela de utilizadores e os 3 perfis), o quadro Kanban operacional (com iterações e labels) e o fluxo de CI a bloquear erros.
+- **Demonstração enviada ao coordenador de turno (data e canal):** 27/11/2026, via WhatsApp (vídeo de 1 minuto a mostrar a app a arrancar e o quadro).
+- **Retorno recebido:** Sem retorno do coordenador até ao fecho da sprint. O Product Owner (Rodolf) representou o coordenador, validando que o esqueleto e a base de dados eram o alicerce correto para os próximos módulos, e ajustou o backlog.
+- **Itens que não cumpriram a Definição de Pronto (voltam ao Product Backlog):** 
+  - #7 (Modelo de dados v1): Movido para a Sprint 2 por falta de capacidade (a equipa focou-se em desbloquear o código).
+  - #11 (Login): A dependência do #9 (esqueleto) atrasou o arranque, pelo que o login passa para a Sprint 2.
 
 ## Retrospectiva (27/11)
 
-- **O que correu bem:**
-- **O que melhorar:**
-- **Acção para a Sprint 2:**
-- **«Desafio a vigiar» actualizado no `processo.md`:** sim / não
+- **O que correu bem:** O quadro público e organizado; o planeamento e as dailies registados via PR; o CI apanhou um erro crítico (README apagado e falha no pytest) antes de chegar à `main`; a capacidade de replaneamento do Scrum perante a avaria de hardware.
+- **O que melhorar:** Dependência de um só computador; um PR foi aprovado com o CI vermelho; edição directa da branch do autor (o que criou o bug do README); dailies registadas com um dia de atraso.
+- **Acção para a Sprint 2:** Correr `pytest` e `ruff` num clone limpo antes de abrir cada PR; usar a opção "Request changes" no GitHub em vez de editar a branch do colega; só aprovar PRs com o CI verde; o Dalton passa a usar o editor web do GitHub quando o PC falhar; registar a daily no próprio dia.
+- **«Desafio a vigiar» actualizado no `processo.md`:** Sim.
 
 ## Métricas de fluxo
 
 | Medida | Valor |
 |---|---|
-| Trabalho em curso (WIP), máximo atingido | |
-| Débito (throughput): itens concluídos na sprint | |
-| Idade do item mais antigo ainda em curso (work item age) | |
-| Tempo de ciclo (cycle time) de 3 issues concluídas | #__: __ ; #__: __ ; #__: __ |
+| Trabalho em curso (WIP), máximo atingido | 3 itens (limite máximo estipulado pela equipa) |
+| Débito (throughput): itens concluídos na sprint | 9 itens |
+| Idade do item mais antigo ainda em curso (work item age) | 3 dias (Issue #1 e #8) |
+| Tempo de ciclo (cycle time) de 3 issues concluídas | #9: 3 dias ; #8: 2 dias ; #1: 2 dias |
 
 **Interpretação e o que muda na próxima sprint:**
+O limite de WIP de 3 itens provou ser adequado para duas pessoas, evitando a sobrecarga. No entanto, o tempo de ciclo do #9 (3 dias) revelou um gargalo: tínhamos um "ponto único de falha" (o computador do Dalton) num item crítico. Na Sprint 2, as tarefas críticas devem ser divididas em PRs menores (como foi feito no final) para permitir que o fluxo não pare caso alguém fique bloqueado.
 
 ## Contribuições e revisões
 
 | Membro | Contribuição relevante (código, testes ou documentação) | PR revisto |
 |---|---|---|
-| Rodolf | | |
-| Dalton | | |
+| Rodolf | Documentação (ADRs, Requisitos, DoD, Histórias), correção do CI (pythonpath e README) no PR #57, e ligação à BD (#10). | PR #57 (Dalton) e revisão do esqueleto. |
+| Dalton | Esqueleto FastAPI com Tailwind e CI (#9), rascunhos das secções Equipa e Eventos. | PR #10 (Rodolf) e aprovação do PR #57 no browser. |

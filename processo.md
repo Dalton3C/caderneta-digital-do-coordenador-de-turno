@@ -19,11 +19,29 @@ Estes são os quatro valores do Manifesto Ágil e o que o nosso grupo decide faz
 
 ## Equipa
 
-(Actividade 2 — Sprint 1)
+| Membro | Responsabilidade | Tarefas concretas neste projecto |
+|---|---|---|
+| Rodolf | Product Owner e Developer | Define o Objectivo do Produto; escreve e ordena as issues e os critérios de aceitação; representa o coordenador de turno quando não há retorno (e fica escrito no `sprint-N.md`); decide o que se demonstra na revisão |
+| Dalton | Scrum Master e Developer | Garante que o Scrum é compreendido e aplicado; facilita os eventos; vigia os limites de WIP; calcula as medidas de fluxo; cria a etiqueta `sprint-N`; ajuda a remover impedimentos |
+| Ambos | Developers | Planeiam a Lista da Sprint, constroem o Incremento cumprindo a Definição de Pronto, revêem o código um do outro e adaptam o plano diariamente |
+
+**Responsabilidades e não papéis.** O Scrum Guide 2020 usa o termo *accountabilities* (responsabilidades) em vez de papéis. Um papel sugere um cargo numa hierarquia, enquanto uma responsabilidade indica por que resultado cada pessoa responde. Numa equipa de duas pessoas, isto permite acumular: os dois são Developers e cada um responde também por uma outra parte, sem que um seja chefe do outro. Foi o que vivemos na Sprint 1: quando o computador do Dalton falhou, o Rodolf assumiu temporariamente issues dele, porque a responsabilidade de entregar o Incremento é da equipa e não de uma pessoa.
+
+*Fonte: Schwaber e Sutherland, The Scrum Guide, 2020, secção «The Scrum Team», scrumguides.org.*
 
 ## Eventos
 
-(Actividade 3 — Sprint 1)
+| Evento | Propósito | Participantes | Máximo no Guia (sprint de 1 mês) | Duração escolhida | O que sai do evento |
+|---|---|---|---|---|---|
+| Sprint | Contentor dos outros eventos; produz um Incremento | Equipa | 1 mês | 4 dias reais (a Sprint 1 ficou com 3 no quadro, por causa do atraso) | Incremento marcado com `sprint-N` |
+| Planeamento | Definir porquê, o quê e como | Rodolf e Dalton | 8 h | 45 min, no 1.º dia | Sprint Goal e issues escolhidas no `sprint-N.md` |
+| Daily | Inspeccionar o progresso e adaptar o plano | Rodolf e Dalton | 15 min | Escrita, até 10 min, 3 linhas por membro | Entrada diária no `sprint-N.md` |
+| Revisão | Inspeccionar o Incremento com o coordenador | Equipa e coordenador (por demonstração) | 4 h | 30 min, no último dia | Demonstração, retorno e Lista do Produto ajustada |
+| Retrospectiva | Melhorar o processo | Rodolf e Dalton | 3 h | 20 min, a seguir à revisão | Melhorias e secção «Desafio a vigiar» actualizada |
+
+**Justificação.** Uma sprint de 4 dias corresponde a cerca de um quinto de um mês, o que daria 1h36 de planeamento, 48 min de revisão e 36 min de retrospectiva. Como somos duas pessoas com contacto diário, reduzimos ainda mais. A daily é escrita porque os dois conhecemos o trabalho um do outro e cada um regista o seu bloco no próprio dia. A revisão e a retrospectiva fazem-se na mesma sessão, mas com propósitos separados: a revisão olha para o produto e a retrospectiva olha para a forma de trabalhar. Na Sprint 1 o planeamento fez-se no 2.º dia por causa do atraso de arranque, e isso ficou registado.
+
+*Fonte: Schwaber e Sutherland, The Scrum Guide, 2020, secção «Scrum Events», scrumguides.org.*
 
 ## Objectivo do Produto e Definição de Pronto
 
@@ -61,7 +79,12 @@ Se um item não cumprir a DoD, **não é apresentado na Sprint Review** como par
 
 ## Ferramentas
 
-(Actividade 7 — Sprint 2. Cada ferramenta adicional: porquê, quem usa, evidência de uso.)
+| Ferramenta | Porquê | Quem usa | Evidência |
+|---|---|---|---|
+| pytest | Testes automáticos | Rodolf e Dalton | `tests/`; execução no CI |
+| ruff | Verificação de estilo e erros simples | Rodolf e Dalton | CI (`ruff check .`) |
+| GitHub Actions | Executar ruff e pytest em cada PR | Rodolf e Dalton | Separador Actions; PR #57 |
+| Tailwind CSS (CLI) | Compilar o CSS responsivo | Rodolf e Dalton | `app/static/css/app.css` |
 
 ## Regras de uso da IA
 
@@ -69,20 +92,17 @@ Se um item não cumprir a DoD, **não é apresentado na Sprint Review** como par
 
 ## Desafio a vigiar
 
-**Desafio actual (provisório, Sprint 1):** familiaridade com as ferramentas (GitHub Projects,
-Pull Requests, protecção da `main`) e início tardio de tarefas de configuração.
+**Desafio actual (provisório, Sprint 1):** familiaridade com as ferramentas (GitHub Projects, Pull Requests, protecção da `main`) e dependência de um único computador/pessoa num item crítico.
 
-**O que aconteceu:** começámos a configuração às 23h de 24/11 e só a concluímos a 25/11,
-o que atrasou o arranque da Sprint 1 em um dia.
+**O que aconteceu:** 
+1. Começámos a configuração do quadro às 23h de 24/11, o que atrasou o arranque da Sprint 1 em um dia.
+2. Na reta final da sprint, o computador do Dalton avariou, bloqueando a entrega do esqueleto FastAPI (#9), que era o caminho crítico para a base de dados (#10) e para o login (#11).
+3. O CI falhou no PR #57 porque o README foi apagado por engano durante uma edição cruzada da branch do colega.
 
-**O que vamos fazer:** ensaiar o fluxo completo (ramo, commit, push, PR, revisão, merge) antes de
-trabalhar a sério; no primeiro dia de cada sprint, verificar em 10 minutos que os dois
-conseguem fazer `git push`, abrir o quadro e abrir um PR; consultar primeiro a documentação oficial
-(GitHub Docs) quando surgir um bloqueio.
+**O que vamos fazer (Acções para a Sprint 2):** 
+- Ensaiar o fluxo completo (ramo, commit, push, PR, revisão, merge) no primeiro dia da sprint.
+- Consultar primeiro a documentação oficial (GitHub Docs) quando surgir um bloqueio.
+- **Mitigação do hardware:** Se o PC de um membro falhar, esse membro usará o editor web do GitHub para fazer alterações simples (ex: documentação) e o colega assumirá temporariamente os PRs de código, registando a alteração de responsabilidade no `sprint-N.md`.
+- **Regra de revisão:** Nunca editar a branch de outra pessoa. Se houver um erro, usar o botão "Request changes" no PR com um comentário a explicar o que deve ser corrigido.
 
-(Esta secção é revista em todas as retrospectivas. O desafio da Actividade 6, retirado do estudo
-de Ahmad, Markkula e Oivo (2013), será acrescentado na Sprint 2.)
-
-## Kanban, WIP e métricas
-
-(Regras do quadro, limites de WIP e definições das medidas de fluxo. Sprint 2.)
+*(Esta secção é revista em todas as retrospectivas. O desafio da Actividade 6, retirado do estudo de Ahmad, Markkula e Oivo (2013), será acrescentado na Sprint 2.)*
